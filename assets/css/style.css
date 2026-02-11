@@ -694,3 +694,7 @@ nav {
 .project-info p {
   margin-bottom: 16px; 
 }
+/* --- Force English only: hide language switch UI --- */
+.lang-toggle {
+  display: none !important;
+}
