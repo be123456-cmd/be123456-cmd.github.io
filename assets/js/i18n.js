@@ -1,6 +1,6 @@
 // 定义全局变量
 let langData = {};
-let currentLang = localStorage.getItem('lang') || 'zh';
+let currentLang = 'en';
 
 // 1. 暴露全局对象
 window.i18n = {
