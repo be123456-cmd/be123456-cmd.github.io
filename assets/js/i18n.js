@@ -11,7 +11,6 @@ window.i18n = {
   changeLang: (lang) => {
     if (currentLang === lang) return;
     currentLang = lang;
-    localStorage.setItem('lang', lang);
     loadLang(lang);
   },
   currentLang: () => currentLang
