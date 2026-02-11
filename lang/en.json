@@ -79,19 +79,29 @@
   "timeline": {
     "title": "Timeline",
     "event1": {
-      "date": "2025",
-      "title": "Academic & Technical Milestones",
-      "desc": "Currently organizing key achievements and project highlights into a clear timeline. Full details will be added soon."
+      "date": "2019",
+      "title": "Started Programming with Robotics Club",
+      "desc": "Joined a robotics programming hobby class and developed a strong interest in coding and problem-solving."
     },
     "event2": {
-      "date": "2024",
-      "title": "Project Development & Iteration",
-      "desc": "Focused on learning-by-building and improving reliability through debugging and systematic iteration. More entries coming soon."
+      "date": "2020",
+      "title": "Achieved Runner-Up in Robotics Competition",
+      "desc": "Participated in the Robotics Programming Competition in Yingkou, Liaoning Province, China, and won the second place in the competition."
     },
     "event3": {
+      "date": "2021",
+      "title": "Self-Learned Python Programming",
+      "desc": "Started self-learning Python programming during middle school and acquired fundamental coding skills."
+    },
+    "event4": {
       "date": "2023",
-      "title": "Learning Foundations",
-      "desc": "Built foundations in programming and problem-solving. Timeline entries will be expanded with specific dates and outcomes."
+      "title": "Started Web Development",
+      "desc": "Began self-learning web development and designed a simple timecard website for my father's logistics company."
+    },
+    "event5": {
+      "date": "2024",
+      "title": "Created a Website for a Friend's Restaurant",
+      "desc": "With help from a senior, I created a promotional website for a restaurant owned by my friend's family."
     }
   },
   "skills": {
