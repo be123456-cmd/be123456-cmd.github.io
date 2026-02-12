@@ -235,10 +235,10 @@ function initContactLinks() {
   container.innerHTML = '';
   
   const contacts = [
-    { icon: "fab fa-bilibili", key: "contact.bilibili", link: "https://space.bilibili.com/385516781/upload/video" },
-    { icon: "fab fa-github", key: "contact.github", link: "https://github.com/Lain-Ego0" },
-    { icon: "fab fa-twitter", key: "contact.twitter", link: "https://x.com/Lain_Ego0" },
-    { icon: "fab fa-zhihu", key: "contact.zhihu", link: "https://www.zhihu.com/people/hua-99-50-21" }
+    { icon: "fab fa-bilibili", key: "contact.bilibili", link: "https://space.bilibili.com/496395674?spm_id_from=333.1007.0.0" },
+    { icon: "fab fa-github", key: "contact.github", link: "https://github.com/be123456-cmd" },
+    { icon: "fab fa-twitter", key: "contact.twitter", link: "https://x.com/" },
+    { icon: "fab fa-zhihu", key: "contact.zhihu", link: "https://www.zhihu.com/signin?next=%2F" }
   ];
   
   contacts.forEach(c => {
