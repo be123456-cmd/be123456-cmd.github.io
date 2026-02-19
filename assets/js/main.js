@@ -61,27 +61,52 @@ function initProjects() {
 
   const projects = [
     { 
-      img: "assets/images/Portfolio-01.png", 
+      // ✅ 第一个项目缩略图改为你的点餐网站主图
+      img: "assets/images/a39f3c4973685cbf306d6374d0b5d898.png",
       titleKey: "projects.item1.title", 
       descKey: "projects.item1.desc",
-      tagsKey: "projects.item1.tags", // Added tags key
+      tagsKey: "projects.item1.tags",
       link: "pages/projects/project1.html"
     },
     { 
       img: "assets/images/Portfolio-02.png", 
       titleKey: "projects.item2.title", 
       descKey: "projects.item2.desc", 
-      tagsKey: "projects.item2.tags", // Added tags key
+      tagsKey: "projects.item2.tags",
       link: "pages/projects/project2.html"
     },
     { 
       img: "assets/images/Portfolio-03.png", 
       titleKey: "projects.item3.title", 
       descKey: "projects.item3.desc", 
-      tagsKey: "projects.item3.tags", // Added tags key
+      tagsKey: "projects.item3.tags",
       link: "pages/projects/project3.html"
     }
   ];
+
+  projects.forEach(p => {
+    const tags = window.i18n.get(p.tagsKey);
+    const tagsHtml = Array.isArray(tags) 
+      ? `<div class="project-tags">${tags.map(t => `<span class="project-tag">${t}</span>`).join('')}</div>`
+      : '';
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div style="overflow:hidden;">
+        <img src="${p.img}" alt="${window.i18n.get('projects.imgAlt')}" class="project-thumbnail">
+      </div>
+      <div class="project-info">
+        <h3>${window.i18n.get(p.titleKey)}</h3>
+        <p>${window.i18n.get(p.descKey)}</p>
+        ${tagsHtml}
+        <a href="${p.link}" class="project-link">${window.i18n.get('projects.viewDetail')}</a>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
 
   projects.forEach(p => {
     // 处理 Tags
