@@ -1,31 +1,155 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 02 - Lain-Ego</title>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 02 - A-Level Revision Website</title>
+
   <script>
-    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const savedTheme =
+      localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', savedTheme);
   </script>
 
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* Local-only styles: keep your original look, just enhance readability */
+    .project-header { text-align: center; margin-bottom: 18px; }
+
+    .project-subtitle {
+      margin-top: 10px;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .project-section {
+      max-width: 880px;
+      margin: 28px auto;
+      line-height: 1.9;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .project-section h3 {
+      color: var(--text-main);
+      font-size: 1.15rem;
+      margin: 22px 0 10px;
+    }
+
+    .project-section ul { margin-left: 18px; list-style: disc; }
+    .project-section li { margin: 6px 0; }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 18px 0 6px;
+    }
+
+    .pill {
+      font-size: 0.85rem;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-hover);
+      color: var(--text-muted);
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-light);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+      color: var(--text-main);
+      font-weight: 600;
+      transition: var(--transition-base);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .mindmap-wrap {
+      max-width: 980px;
+      margin: 28px auto;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-card);
+      padding: 18px;
+      overflow: auto;
+    }
+
+    .mindmap-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .mindmap-svg text {
+      fill: var(--text-main);
+      font-family: var(--font-main);
+      font-size: 14px;
+    }
+    .mindmap-svg .muted { fill: var(--text-muted); font-size: 12px; }
+    .mindmap-svg .node {
+      fill: var(--bg-hover);
+      stroke: var(--border-light);
+      stroke-width: 1;
+      rx: 12; ry: 12;
+    }
+    .mindmap-svg .root {
+      fill: rgba(37, 99, 235, 0.12);
+      stroke: var(--primary);
+      stroke-width: 1.5;
+    }
+    .mindmap-svg .link {
+      stroke: rgba(100, 116, 139, 0.5);
+      stroke-width: 1.2;
+      fill: none;
+    }
+  </style>
 </head>
+
 <body>
   <nav>
     <div class="container nav-container">
       <a href="../../index.html" class="logo">
-        <span class="logo-text">Lain-Ego</span>
+        <span class="logo-text">Yang Chenshuo</span>
         <div class="logo-dot"></div>
       </a>
+
       <div class="nav-actions">
         <div class="nav-links">
-          <a href="../../index.html#projects" data-i18n="nav.projects">Projects</a>
-          <a href="../../index.html#documents" data-i18n="nav.documents">Documents</a>
-          <a href="../../index.html#contact" data-i18n="nav.contact">Contact Me</a>
+          <a href="../../index.html#projects">Projects</a>
+          <a href="../../index.html#timeline">Timeline</a>
+          <a href="../../index.html#skills">Stack</a>
+          <a href="../../index.html#contact">Contact</a>
         </div>
+
         <div class="nav-controls">
           <button class="control-btn lang-toggle" aria-label="Toggle Language">中文</button>
           <button class="control-btn theme-toggle" aria-label="Toggle Theme">
@@ -40,28 +164,171 @@
   <section class="section-padding">
     <div class="container">
       <div class="card" style="padding: 40px;">
-        <h2 data-i18n="project2.title"></h2>
-        
-        <img src="../../assets/images/Portfolio-02.png" data-i18n="projects1.imgAlt1" class="project-img">
-        
-        <div style="max-width: 800px; margin: 30px auto; line-height: 1.8; color: var(--text-muted);">
-           <p data-i18n="project2.desc"></p>
+        <div class="project-header">
+          <h2>A-Level Revision Website</h2>
+          <p class="project-subtitle">
+            A focused revision hub that organizes A-Level subjects (Math / Physics / Chemistry) and provides lightweight planning and check-in tools — designed to be fast, simple, and usable without accounts or a backend.
+          </p>
+
+          <div class="pill-row">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Revision Hub</span>
+            <span class="pill">Planner</span>
+            <span class="pill">Check-in</span>
+            <span class="pill">No Backend</span>
+            <span class="pill">GitHub Pages</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="cta-btn" href="https://be123456-cmd.github.io/alevel-revision.github.io/" target="_blank" rel="noopener">
+              <i class="fas fa-globe"></i> Live Demo
+            </a>
+            <a class="cta-btn" href="https://github.com/be123456-cmd/alevel-revision.github.io" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Source Code
+            </a>
+          </div>
         </div>
 
-        <img src="../../assets/images/Portfolio-02-1.png" data-i18n="project1.imgAlt2" class="project-img">
-        <img src="../../assets/images/Portfolio-02-2.png" data-i18n="project1.imgAlt3" class="project-img">
-        <img src="../../assets/images/Portfolio-02-3.png" data-i18n="project1.imgAlt4" class="project-img">
-     
+        <!-- Main Hero Image -->
+        <img
+          src="../../assets/images/fbc96404f98d7b176fcbc9a542a24261.png"
+          alt="A-Level revision website preview"
+          class="project-img"
+        />
+
+        <div class="project-section">
+          <h3>Implementation / Design Approach</h3>
+          <ul>
+            <li><b>Information architecture first</b>: organize revision content by subject and by resource type (notes, links, practice papers) so navigation stays intuitive.</li>
+            <li><b>Minimal friction</b>: no login, no database, and no complex setup — the website should work instantly on any device.</li>
+            <li><b>Planner logic (client-side)</b>: take user inputs (papers left, time available, reserve days) and output a readable revision plan on the page.</li>
+            <li><b>Check-in flow</b>: provide a simple daily check-in interface for habit building (works without persistence; can be extended with localStorage).</li>
+            <li><b>Reusable UI components</b>: cards, badges, and consistent typography to keep the experience clean and predictable.</li>
+          </ul>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li>Centralized revision links and subject-based navigation</li>
+            <li>Revision plan generator (inputs → plan output)</li>
+            <li>Daily check-in / progress UI</li>
+            <li>Responsive design for mobile and desktop</li>
+          </ul>
+
+          <h3>What I would improve next</h3>
+          <ul>
+            <li>Persist settings and progress using <b>localStorage</b> (last plan, check-in streak, selected subjects)</li>
+            <li>Add difficulty weighting (topic priority, weak areas, time-to-score efficiency)</li>
+            <li>Export the generated plan into a printable PDF view</li>
+            <li>Optional multi-day timeline visualization (calendar-style)</li>
+          </ul>
+        </div>
+
+        <!-- Mind Map (SVG) -->
+        <div class="mindmap-wrap">
+          <svg class="mindmap-svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-label="Mind map of A-Level revision website">
+            <!-- Links -->
+            <path class="link" d="M 360 260 C 420 260, 420 120, 480 120" />
+            <path class="link" d="M 360 260 C 420 260, 420 210, 480 210" />
+            <path class="link" d="M 360 260 C 420 260, 420 300, 480 300" />
+            <path class="link" d="M 360 260 C 420 260, 420 390, 480 390" />
+
+            <path class="link" d="M 660 120 C 720 120, 720 70, 780 70" />
+            <path class="link" d="M 660 120 C 720 120, 720 130, 780 130" />
+            <path class="link" d="M 660 120 C 720 120, 720 190, 780 190" />
+
+            <path class="link" d="M 660 210 C 720 210, 720 230, 780 230" />
+            <path class="link" d="M 660 210 C 720 210, 720 290, 780 290" />
+
+            <path class="link" d="M 660 300 C 720 300, 720 320, 780 320" />
+            <path class="link" d="M 660 300 C 720 300, 720 380, 780 380" />
+
+            <path class="link" d="M 660 390 C 720 390, 720 410, 780 410" />
+            <path class="link" d="M 660 390 C 720 390, 720 470, 780 470" />
+
+            <!-- Root -->
+            <rect class="node root" x="120" y="225" width="240" height="70" rx="14" ry="14"></rect>
+            <text x="140" y="255"><tspan font-weight="700">A-Level Revision Website</tspan></text>
+            <text class="muted" x="140" y="278">Resources + Planner + Check-in</text>
+
+            <!-- Level 1 nodes -->
+            <rect class="node" x="480" y="85" width="180" height="70"></rect>
+            <text x="500" y="118"><tspan font-weight="700">Resources</tspan></text>
+            <text class="muted" x="500" y="140">notes + external links</text>
+
+            <rect class="node" x="480" y="175" width="180" height="70"></rect>
+            <text x="500" y="208"><tspan font-weight="700">Subjects</tspan></text>
+            <text class="muted" x="500" y="230">Math / Physics / Chem</text>
+
+            <rect class="node" x="480" y="265" width="180" height="70"></rect>
+            <text x="500" y="298"><tspan font-weight="700">Planner</tspan></text>
+            <text class="muted" x="500" y="320">inputs → plan output</text>
+
+            <rect class="node" x="480" y="355" width="180" height="70"></rect>
+            <text x="500" y="388"><tspan font-weight="700">Check-in</tspan></text>
+            <text class="muted" x="500" y="410">consistency system</text>
+
+            <!-- Level 2 nodes -->
+            <rect class="node" x="780" y="45" width="170" height="52"></rect>
+            <text x="795" y="76"><tspan font-weight="700">Curate</tspan></text>
+            <text class="muted" x="795" y="95">keep it focused</text>
+
+            <rect class="node" x="780" y="105" width="170" height="52"></rect>
+            <text x="795" y="136"><tspan font-weight="700">Organize</tspan></text>
+            <text class="muted" x="795" y="155">fast navigation</text>
+
+            <rect class="node" x="780" y="165" width="170" height="52"></rect>
+            <text x="795" y="196"><tspan font-weight="700">Mobile-first</tspan></text>
+            <text class="muted" x="795" y="215">simple layout</text>
+
+            <rect class="node" x="780" y="205" width="170" height="52"></rect>
+            <text x="795" y="236"><tspan font-weight="700">Inputs</tspan></text>
+            <text class="muted" x="795" y="255">time + papers left</text>
+
+            <rect class="node" x="780" y="265" width="170" height="52"></rect>
+            <text x="795" y="296"><tspan font-weight="700">Plan Output</tspan></text>
+            <text class="muted" x="795" y="315">clear action list</text>
+
+            <rect class="node" x="780" y="295" width="170" height="52"></rect>
+            <text x="795" y="326"><tspan font-weight="700">Iteration</tspan></text>
+            <text class="muted" x="795" y="345">tune the algorithm</text>
+
+            <rect class="node" x="780" y="355" width="170" height="52"></rect>
+            <text x="795" y="386"><tspan font-weight="700">Habit Loop</tspan></text>
+            <text class="muted" x="795" y="405">check-in & streak</text>
+
+            <rect class="node" x="780" y="415" width="170" height="52"></rect>
+            <text x="795" y="446"><tspan font-weight="700">No Backend</tspan></text>
+            <text class="muted" x="795" y="465">optional localStorage</text>
+          </svg>
+          <div class="mindmap-note">
+            Mind map is embedded as pure SVG (no dependencies), so it renders reliably on GitHub Pages.
+          </div>
+        </div>
+
+        <!-- Screenshots -->
+        <img
+          src="../../assets/images/5971f48fe44b0fc5ef9ed6e19e5730ec.png"
+          alt="Planner UI preview"
+          class="project-img"
+        />
+        <img
+          src="../../assets/images/ea5f8c58544ec7d7cdf5659f5fb531d8.png"
+          alt="Check-in and progress UI preview"
+          class="project-img"
+        />
+
         <div class="publish-links-wrapper" style="margin-top: 40px;">
           <div class="publish-links">
-            <a href="https://" target="_blank" class="publish-link github">
-              <i class="fab fa-github"></i> <span data-i18n="project1.links.github">开源代码</span>
+            <a href="https://github.com/be123456-cmd/alevel-revision.github.io" target="_blank" class="publish-link github" rel="noopener">
+              <i class="fab fa-github"></i> <span>Source Code</span>
             </a>
-            <a href="https://" target="_blank" class="publish-link">
-              <i class="fas fa-file-pdf"></i> <span data-i18n="project1.links.techDoc">技术文档（暂无）</span>
+            <a href="https://be123456-cmd.github.io/alevel-revision.github.io/" target="_blank" class="publish-link" rel="noopener">
+              <i class="fas fa-globe"></i> <span>Live Demo</span>
             </a>
-            <a href="https://" target="_blank" class="publish-link bilibili">
-              <i class="fab fa-bilibili"></i> <span data-i18n="project1.links.demo">演示视频（暂无）</span>
+            <a href="../../index.html#projects" class="publish-link">
+              <i class="fas fa-arrow-left"></i> <span>Back to Projects</span>
             </a>
           </div>
         </div>
@@ -70,7 +337,7 @@
     </div>
   </section>
 
-  <footer data-i18n="footer.copyright">© 2025 Lain-Ego. All rights reserved.</footer>
+  <footer>© 2023-2026 Yang Chenshuo | Personal Homepage</footer>
 
   <script src="../../assets/js/i18n.js"></script>
   <script src="../../assets/js/main.js"></script>
