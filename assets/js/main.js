@@ -29,11 +29,11 @@ function initThemeToggle() {
   toggleBtn.addEventListener('click', () => {
     const currentTheme = htmlEl.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
+
     // 设置 DOM 和存储
     htmlEl.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    
+
     console.log(`[Theme] Switched to ${newTheme}`);
   });
 }
@@ -51,8 +51,6 @@ function initLangToggle() {
   });
 }
 
-// ... (Previous code remains the same)
-
 // ================= 1. 精选项目渲染 =================
 function initProjects() {
   const grid = document.querySelector('.projects-grid');
@@ -60,58 +58,34 @@ function initProjects() {
   grid.innerHTML = ''; // 【关键】清空旧内容
 
   const projects = [
-    { 
+    {
       // ✅ 第一个项目缩略图改为你的点餐网站主图
       img: "assets/images/a39f3c4973685cbf306d6374d0b5d898.png",
-      titleKey: "projects.item1.title", 
+      titleKey: "projects.item1.title",
       descKey: "projects.item1.desc",
       tagsKey: "projects.item1.tags",
       link: "pages/projects/project1.html"
     },
-    { 
-      img: "assets/images/Portfolio-02.png", 
-      titleKey: "projects.item2.title", 
-      descKey: "projects.item2.desc", 
+    {
+      img: "assets/images/Portfolio-02.png",
+      titleKey: "projects.item2.title",
+      descKey: "projects.item2.desc",
       tagsKey: "projects.item2.tags",
       link: "pages/projects/project2.html"
     },
-    { 
-      img: "assets/images/Portfolio-03.png", 
-      titleKey: "projects.item3.title", 
-      descKey: "projects.item3.desc", 
+    {
+      img: "assets/images/Portfolio-03.png",
+      titleKey: "projects.item3.title",
+      descKey: "projects.item3.desc",
       tagsKey: "projects.item3.tags",
       link: "pages/projects/project3.html"
     }
   ];
 
   projects.forEach(p => {
-    const tags = window.i18n.get(p.tagsKey);
-    const tagsHtml = Array.isArray(tags) 
-      ? `<div class="project-tags">${tags.map(t => `<span class="project-tag">${t}</span>`).join('')}</div>`
-      : '';
-
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <div style="overflow:hidden;">
-        <img src="${p.img}" alt="${window.i18n.get('projects.imgAlt')}" class="project-thumbnail">
-      </div>
-      <div class="project-info">
-        <h3>${window.i18n.get(p.titleKey)}</h3>
-        <p>${window.i18n.get(p.descKey)}</p>
-        ${tagsHtml}
-        <a href="${p.link}" class="project-link">${window.i18n.get('projects.viewDetail')}</a>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
-}
-
-
-  projects.forEach(p => {
     // 处理 Tags
     const tags = window.i18n.get(p.tagsKey);
-    const tagsHtml = Array.isArray(tags) 
+    const tagsHtml = Array.isArray(tags)
       ? `<div class="project-tags">${tags.map(t => `<span class="project-tag">${t}</span>`).join('')}</div>`
       : '';
 
@@ -131,8 +105,6 @@ function initProjects() {
     grid.appendChild(card);
   });
 }
-
-// ... (Rest of the code remains the same)
 
 // ================= 2. 开源贡献渲染 =================
 function initOpenSource() {
@@ -144,15 +116,12 @@ function initOpenSource() {
     { key: "opensource.item1", linkCode: "https://github.com/Lain-Ego0/BRS-Parallel-Robot", linkDoc: null },
     { key: "opensource.item2", linkCode: "https://github.com/Lain-Ego0/SliverWolf-ArmRobotDog", linkDoc: null },
     { key: "opensource.item3", linkCode: null, linkDoc: "https://wcn9j5638vrr.feishu.cn/wiki/space/7570988375279517715" }
-
-
-
   ];
 
   items.forEach(item => {
     const tags = window.i18n.get(`${item.key}.tags`) || [];
     const tagsHtml = Array.isArray(tags) ? tags.map(t => `<span class="os-tag">${t}</span>`).join('') : '';
-    
+
     let buttonsHtml = '';
     if (item.linkCode) buttonsHtml += `<a href="${item.linkCode}" target="_blank" class="os-btn"><i class="fab fa-github"></i> ${window.i18n.get('opensource.btnCode')}</a>`;
     if (item.linkDoc) buttonsHtml += `<a href="${item.linkDoc}" target="_blank" class="os-btn"><i class="fas fa-book"></i> ${window.i18n.get('opensource.btnDoc')}</a>`;
@@ -179,7 +148,7 @@ function initTimeline() {
   container.innerHTML = ''; // 【关键】清空
 
   const events = [
-    "timeline.event6", "timeline.event5", "timeline.event4", 
+    "timeline.event6", "timeline.event5", "timeline.event4",
     "timeline.event3", "timeline.event2", "timeline.event1"
   ];
 
@@ -245,7 +214,7 @@ function initTechStack() {
     const itemsHtml = group.items.map(s => `
       <div class="skill-badge"><i class="${s.icon}"></i> ${s.name}</div>
     `).join('');
-    
+
     const col = document.createElement('div');
     col.className = 'skill-category';
     col.innerHTML = `<h3>${window.i18n.get(group.category)}</h3><div class="skill-list">${itemsHtml}</div>`;
@@ -258,18 +227,18 @@ function initContactLinks() {
   const container = document.querySelector('.contact-links');
   if (!container) return;
   container.innerHTML = '';
-  
+
   const contacts = [
     { icon: "fab fa-bilibili", key: "contact.bilibili", link: "https://space.bilibili.com/496395674?spm_id_from=333.1007.0.0" },
     { icon: "fab fa-github", key: "contact.github", link: "https://github.com/be123456-cmd" },
     { icon: "fab fa-twitter", key: "contact.twitter", link: "https://x.com/" },
     { icon: "fab fa-zhihu", key: "contact.zhihu", link: "https://www.zhihu.com/signin?next=%2F" }
   ];
-  
+
   contacts.forEach(c => {
     const item = document.createElement('div');
     item.className = 'contact-item';
-    item.innerHTML = `<a href="${c.link}" target="_blank"><i class="${c.icon}"></i><p>${window.i18n.get(c.key)}</p></a>`;
+    item.innerHTML = `<a href="${c.link}" target="_blank" rel="noopener"><i class="${c.icon}"></i><p>${window.i18n.get(c.key)}</p></a>`;
     container.appendChild(item);
   });
 }
