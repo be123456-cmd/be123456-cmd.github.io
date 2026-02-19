@@ -23,9 +23,9 @@
       "tags": ["C++", "Qt", "Database", "System Design"]
     },
     "item2": {
-      "title": "Project Placeholder",
-      "desc": "A new project is in progress. I will add a full write-up including features, tech stack, and results once it is ready.",
-      "tags": ["Coming Soon"]
+      "title": "A-Level Revision Website (Resources + Planner)",
+      "desc": "A focused revision hub for A-Level subjects (Math / Physics / Chemistry). Organizes curated resources and provides a simple study-plan generator and check-in UI — designed to work without accounts or a backend.",
+      "tags": ["Web", "Revision Hub", "Planner", "Check-in", "No Backend", "GitHub Pages"]
     },
     "item3": {
       "title": "Project Placeholder",
@@ -43,8 +43,8 @@
     }
   },
   "project2": {
-    "title": "Project Placeholder",
-    "desc": "This is a detailed project page placeholder.<br><br>More content will be added soon: feature overview, development notes, technical stack, and final outcomes."
+    "title": "A-Level Revision Website (Resources + Planner)",
+    "desc": "This project is a lightweight A-Level revision hub built to make self-study more structured and actionable.<br><br>It organizes subjects (Math / Physics / Chemistry) and curated external resources in one place, and includes a simple planner that turns remaining papers and remaining time into a readable revision plan. A small check-in UI supports daily consistency, without requiring accounts or a backend."
   },
   "project3": {
     "title": "Project Placeholder",
@@ -76,39 +76,39 @@
       "tags": ["Coming Soon"]
     }
   },
- "timeline": {
-  "title": "Timeline",
-  "event1": {
-    "date": "2019",
-    "title": "Started Programming with Robotics Club",
-    "desc": "Joined a robotics programming hobby class and developed a strong interest in coding and problem-solving."
+  "timeline": {
+    "title": "Timeline",
+    "event1": {
+      "date": "2019",
+      "title": "Started Programming with Robotics Club",
+      "desc": "Joined a robotics programming hobby class and developed a strong interest in coding and problem-solving."
+    },
+    "event2": {
+      "date": "2020",
+      "title": "Achieved Runner-Up in Robotics Competition",
+      "desc": "Participated in the Robotics Programming Competition in Yingkou, Liaoning Province, China, and won the second place in the competition."
+    },
+    "event3": {
+      "date": "2021",
+      "title": "Self-Learned Python Programming",
+      "desc": "Started self-learning Python programming during middle school and acquired fundamental coding skills."
+    },
+    "event4": {
+      "date": "2023",
+      "title": "Started Web Development",
+      "desc": "Began self-learning web development and designed a simple timecard website for my father's logistics company."
+    },
+    "event5": {
+      "date": "2024",
+      "title": "Built an A-Level Self-Study Planner Website",
+      "desc": "Developed a personal A-Level study website to plan and track revision progress across subjects (Math, Physics, Chemistry, and Further Math). It organizes topics into a clear checklist and timeline, links out to notes and external resources, and includes daily check-ins to build consistency. The main goal was to turn a large syllabus into an actionable plan: what to study next, what’s completed, what’s overdue, and how to adjust priorities as exam dates get closer."
+    },
+    "event6": {
+      "date": "2025",
+      "title": "Began Designing a Custom Restaurant Ordering System Website",
+      "desc": "Started planning a self-built ordering system website for a friend’s restaurant, focusing on an end-to-end workflow: digital menu browsing, item customization, table or takeaway ordering, and real-time order status. I explored a clean UI structure and a modular menu design, with the long-term goal of adding lightweight admin tools (menu updates, order management, and basic analytics) so the system can be deployed quickly and iterated based on real operational needs."
+    }
   },
-  "event2": {
-    "date": "2020",
-    "title": "Achieved Runner-Up in Robotics Competition",
-    "desc": "Participated in the Robotics Programming Competition in Yingkou, Liaoning Province, China, and won the second place in the competition."
-  },
-  "event3": {
-    "date": "2021",
-    "title": "Self-Learned Python Programming",
-    "desc": "Started self-learning Python programming during middle school and acquired fundamental coding skills."
-  },
-  "event4": {
-    "date": "2023",
-    "title": "Started Web Development",
-    "desc": "Began self-learning web development and designed a simple timecard website for my father's logistics company."
-  },
-  "event5": {
-    "date": "2024",
-    "title": "Built an A-Level Self-Study Planner Website",
-    "desc": "Developed a personal A-Level study website to plan and track revision progress across subjects (Math, Physics, Chemistry, and Further Math). It organizes topics into a clear checklist and timeline, links out to notes and external resources, and includes daily check-ins to build consistency. The main goal was to turn a large syllabus into an actionable plan: what to study next, what’s completed, what’s overdue, and how to adjust priorities as exam dates get closer."
-  },
-  "event6": {
-    "date": "2025",
-    "title": "Began Designing a Custom Restaurant Ordering System Website",
-    "desc": "Started planning a self-built ordering system website for a friend’s restaurant, focusing on an end-to-end workflow: digital menu browsing, item customization, table or takeaway ordering, and real-time order status. I explored a clean UI structure and a modular menu design, with the long-term goal of adding lightweight admin tools (menu updates, order management, and basic analytics) so the system can be deployed quickly and iterated based on real operational needs."
-  }
-},
   "skills": {
     "title": "Tech Stack",
     "embedded": "Embedded",
