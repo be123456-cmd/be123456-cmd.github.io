@@ -28,9 +28,9 @@
       "tags": ["Web", "Revision Hub", "Planner", "Check-in", "No Backend", "GitHub Pages"]
     },
     "item3": {
-      "title": "Project Placeholder",
-      "desc": "Another upcoming project will be documented here with a clear problem statement, implementation notes, and final outcomes.",
-      "tags": ["Coming Soon"]
+      "title": "Personal Portfolio Website (This Site)",
+      "desc": "A modern portfolio site for showcasing projects, timeline milestones, and tech stack. Includes a clean card-based UI, theme switching (light/dark), and a lightweight i18n-ready structure for easy updates.",
+      "tags": ["HTML", "CSS", "JavaScript", "Theme Toggle", "i18n", "GitHub Pages"]
     }
   },
   "project1": {
@@ -47,8 +47,8 @@
     "desc": "This project is a lightweight A-Level revision hub built to make self-study more structured and actionable.<br><br>It organizes subjects (Math / Physics / Chemistry) and curated external resources in one place, and includes a simple planner that turns remaining papers and remaining time into a readable revision plan. A small check-in UI supports daily consistency, without requiring accounts or a backend."
   },
   "project3": {
-    "title": "Project Placeholder",
-    "desc": "This is a detailed project page placeholder.<br><br>More content will be added soon: feature overview, development notes, technical stack, and final outcomes."
+    "title": "Personal Portfolio Website (This Site)",
+    "desc": "This website is my personal portfolio for presenting projects, milestones, and skills in a clean and consistent format.<br><br>It uses a card-based layout, theme switching stored in localStorage, and a lightweight i18n loader that can re-render dynamic sections after language data is loaded. The main goal is to keep content easy to update while maintaining a modern UI and fast performance on GitHub Pages."
   },
   "projects1": {
     "imgAlt1": "Project Detail View",
