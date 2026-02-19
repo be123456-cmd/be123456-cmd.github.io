@@ -59,7 +59,7 @@ function initProjects() {
 
   const projects = [
     {
-      // ✅ 第一个项目缩略图改为你的点餐网站主图
+      // Project 1: Ordering Website
       img: "assets/images/a39f3c4973685cbf306d6374d0b5d898.png",
       titleKey: "projects.item1.title",
       descKey: "projects.item1.desc",
@@ -67,13 +67,15 @@ function initProjects() {
       link: "pages/projects/project1.html"
     },
     {
-      img: "assets/images/Portfolio-02.png",
+      // ✅ Project 2: A-Level Revision Website (thumbnail updated)
+      img: "assets/images/fbc96404f98d7b176fcbc9a542a24261.png",
       titleKey: "projects.item2.title",
       descKey: "projects.item2.desc",
       tagsKey: "projects.item2.tags",
       link: "pages/projects/project2.html"
     },
     {
+      // Project 3
       img: "assets/images/Portfolio-03.png",
       titleKey: "projects.item3.title",
       descKey: "projects.item3.desc",
