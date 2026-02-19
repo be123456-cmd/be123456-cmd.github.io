@@ -67,7 +67,7 @@ function initProjects() {
       link: "pages/projects/project1.html"
     },
     {
-      // ✅ Project 2: A-Level Revision Website (thumbnail updated)
+      // Project 2: A-Level Revision Website
       img: "assets/images/fbc96404f98d7b176fcbc9a542a24261.png",
       titleKey: "projects.item2.title",
       descKey: "projects.item2.desc",
@@ -75,8 +75,8 @@ function initProjects() {
       link: "pages/projects/project2.html"
     },
     {
-      // Project 3
-      img: "assets/images/Portfolio-03.png",
+      // ✅ Project 3: Personal Portfolio Website (thumbnail updated)
+      img: "assets/images/b64aba83ddbfd96a91840de4b3d42389.png",
       titleKey: "projects.item3.title",
       descKey: "projects.item3.desc",
       tagsKey: "projects.item3.tags",
@@ -85,7 +85,6 @@ function initProjects() {
   ];
 
   projects.forEach(p => {
-    // 处理 Tags
     const tags = window.i18n.get(p.tagsKey);
     const tagsHtml = Array.isArray(tags)
       ? `<div class="project-tags">${tags.map(t => `<span class="project-tag">${t}</span>`).join('')}</div>`
@@ -112,7 +111,7 @@ function initProjects() {
 function initOpenSource() {
   const grid = document.querySelector('.opensource-grid');
   if (!grid) return;
-  grid.innerHTML = ''; // 【关键】清空
+  grid.innerHTML = '';
 
   const items = [
     { key: "opensource.item1", linkCode: "https://github.com/Lain-Ego0/BRS-Parallel-Robot", linkDoc: null },
@@ -147,7 +146,7 @@ function initOpenSource() {
 function initTimeline() {
   const container = document.querySelector('.timeline-container');
   if (!container) return;
-  container.innerHTML = ''; // 【关键】清空
+  container.innerHTML = '';
 
   const events = [
     "timeline.event6", "timeline.event5", "timeline.event4",
@@ -173,7 +172,7 @@ function initTimeline() {
 function initTechStack() {
   const container = document.querySelector('.skills-wrapper');
   if (!container) return;
-  container.innerHTML = ''; // 【关键】清空
+  container.innerHTML = '';
 
   const stack = [
     {
